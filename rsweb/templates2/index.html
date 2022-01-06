@@ -1,0 +1,105 @@
+{% load static %}
+{% static "media" as baseUrl %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real Shapes</title>
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/styles.css' %}">
+    <link rel = "icon"  href = "{% static 'assets\logo\favicon.ico' %}">
+  </head>
+  <body>
+    <header>
+      <div class = "main">
+        <div class = "logo">
+          <a href = "/">
+            <img src= "{% static 'assets\logo\RS-Logo.png' %}">
+          </a>
+        </div>
+        <div>
+          <ul>
+              <li class= "active"><a href = "/">Home</a></li>
+              <li><a href = "about">About Us</a></li>
+              <li><a href = "services">Services</a></li>
+              <li><a href = "contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <table class = "title" align = "center" width = 100%>
+      <tr align = "center">
+        <td>
+          <h1>Real Shapes</h1>
+          <text>We realize your dreams...</text>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <!--Highlighted Services-->
+    <table>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+    <br>
+    <div class = "servicegrid">
+    {% for service in service%}
+      
+      <div class = "servicecontainer">
+        <div class = "sname"><h2>{{service.servname}}</h2></div>
+        <div class = "spic" align = "center">
+          
+            <div class = "shigh">
+              <text>HOT!!!</text>
+            </div>
+
+          <a href = "#"><img src = "{{service.servpic.url}}"></a>
+        </div>
+        <div class = "sdesc">{{service.servdesc}}</div><br>
+        <div class = "sprice"><b><strong>Starting Price:</strong> Rs {{service.servcost}}/-</b></div>
+        <br>
+      </div>
+      
+    {% endfor %}
+    </div>
+    <div class = "conbox" align = "center">
+      <text class = "context" align = "center">
+        <a class = "hyper" href = "services"><b>See all services.<b></a>
+      </text>
+    </div>
+
+    <h3>Our Clients:</h3>
+    <div class = "clientgrid" align = "center">
+    {% for clinlist in clinlist%}
+      <div class = "clientbox">
+        <a href = "clients"><img src = "{{clinlist.cimg.url}}"></a>
+      </div>
+    {% endfor %}
+    </div>
+
+    
+    <div class = "footdiv">
+    <table class = "foot" align = "left" width= 100%>
+      <tr align = "left" width= 100%>
+        <td align = "left" width= 50%>
+          <text class = "foottext" align = "left">
+            Ozarapara (near Gadhuli Market & Azara Police Station)<br>
+            Kamrup (metro) - 781028<br>
+            Ph: +91 70027 63419<br>
+            eMail: realshapes854@gmail.com<br>
+          </text>
+        </td>
+        <td align = "right" width= 50%>
+          <text class = "foottext" align = "right">
+            (c) 2020 Real Shapes<br>
+            Designed, developed & maintained by <a class = "hyper" href = "https://www.mantraaxom.com">Mantra Associates</a><br>
+          </text>
+        </td>
+      </tr>
+    </table>
+    </div>
+
+  </body>
+
+</html>
