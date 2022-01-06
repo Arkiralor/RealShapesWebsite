@@ -75,15 +75,16 @@ WSGI_APPLICATION = 'rsweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-##DATABASES = {
-##    'default': {
-##        'ENGINE': 'django.db.backends.postgresql',
-##       'NAME': 'realshapes',
-##        'USER': 'postgres',
-##        'PASSWORD': 'Driftking11235',
-##        'HOST': 'localhost'
-##    }
-##}
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'realshapes',
+#        'USER': 'postgres',
+#        'PASSWORD': 'Driftking11235',
+#        'HOST': 'localhost',
+#        'PORT': '5432'
+#    }
+# }
 
 DATABASES = {
     'default': {
