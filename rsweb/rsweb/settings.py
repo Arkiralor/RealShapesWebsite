@@ -30,7 +30,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 DEBUG = True
 
 ##ALLOWED_HOSTS = ['192.168.29.40', 'localhost']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -79,6 +79,7 @@ WSGI_APPLICATION = 'rsweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+## Production Database in PostgreSQL:
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
@@ -90,6 +91,7 @@ DATABASES = {
    }
 }
 
+## Development Database in SQLite:
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
