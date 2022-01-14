@@ -32,13 +32,13 @@ ALLOWED_HOSTS = ['localhost', 'realshapesdemo.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'rstore.apps.RstoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rstore'
 ]
 
 MIDDLEWARE = [
