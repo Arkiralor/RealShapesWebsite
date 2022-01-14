@@ -1,1 +1,1 @@
-web: gunicorn rsweb.wsgi --log-file -
+web: gunicorn rsweb/rsweb.wsgi --log-file -
