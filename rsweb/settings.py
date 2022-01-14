@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = getenv('SECRET_KEY')
+SECRET_KEY = environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('WBDEBUG')
+DEBUG = environ['WBDEBUG']
 
 ##ALLOWED_HOSTS = ['192.168.29.40', 'localhost']
 ALLOWED_HOSTS = ['localhost', 'realshapesdemo.herokuapp.com']
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'rsweb.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': getenv('PGDATABASE'),
-       'USER': getenv('PGUSER'),
-       'PASSWORD': getenv('PGPASSWORD'),
-       'HOST': getenv('PGHOST'),
-       'PORT': getenv('PGPORT')
+       'NAME': environ['PGDATABASE'],
+       'USER': environ['PGUSER'],
+       'PASSWORD': environ['PGPASSWORD'],
+       'HOST': environ['PGHOST'],
+       'PORT': environ['PGPORT']
    }
 }
 
