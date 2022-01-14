@@ -85,7 +85,9 @@ DATABASES = {
        'PASSWORD': environ['PGPASSWORD'],
        'HOST': environ['PGHOST'],
        'PORT': environ['PGPORT'],
-       'OPTIONS': {'sslmode': 'require'}
+       'OPTIONS': {
+           'sslmode': 'require'
+           }
    }
 }
 
