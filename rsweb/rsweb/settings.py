@@ -11,11 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from os import environ
-from dotenv import load_dotenv
-
-load_dotenv()
-
+from os import environ, getenv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,13 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = environ.get('SECRET_KEY')
+SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv('DEBUG')
 
 ##ALLOWED_HOSTS = ['192.168.29.40', 'localhost']
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'realshapesdemo.herokuapp.com']
 
 
 # Application definition
@@ -83,11 +79,11 @@ WSGI_APPLICATION = 'rsweb.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': environ.get('PGDATABASE'),
-       'USER': environ.get('PGUSER'),
-       'PASSWORD': environ.get('PGPASSWORD'),
-       'HOST': environ.get('PGHOST'),
-       'PORT': environ.get('PGPORT')
+       'NAME': getenv('PGDATABASE'),
+       'USER': getenv('PGUSER'),
+       'PASSWORD': getenv('PGPASSWORD'),
+       'HOST': getenv('PGHOST'),
+       'PORT': getenv('PGPORT')
    }
 }
 
