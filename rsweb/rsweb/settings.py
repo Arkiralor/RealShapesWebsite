@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('DEBUG')
+DEBUG = getenv('PGDEBUG')
 
 ##ALLOWED_HOSTS = ['192.168.29.40', 'localhost']
 ALLOWED_HOSTS = ['localhost', 'realshapesdemo.herokuapp.com']
