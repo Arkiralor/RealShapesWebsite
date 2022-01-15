@@ -78,17 +78,17 @@ WSGI_APPLICATION = 'rsweb.wsgi.application'
 
 ## Production Database in PostgreSQL:
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': environ['PGDATABASE'],
-       'USER': environ['PGUSER'],
-       'PASSWORD': environ['PGPASSWORD'],
-       'HOST': environ['PGHOST'],
-       'PORT': environ['PGPORT'],
-       'OPTIONS': {
-           'sslmode': 'require'
-           }
-   }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': environ['PGDATABASE'],
+        'USER': environ['PGUSER'],
+        'PASSWORD': environ['PGPASSWORD'],
+        'HOST': environ['PGHOST'],
+        'PORT': environ['PGPORT'],
+        'OPTIONS': {
+            'sslmode': 'require'
+        }
+    }
 }
 
 ## Development Database in SQLite:
@@ -142,5 +142,5 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-MEDIA_URL= '/media/'
-MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -2,11 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+
 class serv(models.Model):
     servname = models.CharField(max_length=16)
     servdesc = models.TextField()
-    servcost = models.IntegerField(default= 0)
-    servpic = models.ImageField(upload_to = 'assets/images/productimg')
+    servcost = models.IntegerField(default=0)
+    servpic = models.ImageField(upload_to='assets/images/productimg')
     servishigh = models.BooleanField(default=False)
 
     def __str__(self):
@@ -31,23 +32,30 @@ class cust(models.Model):
 
 
 class trans(models.Model):
-    serv = models.IntegerField(default= 0)
+    serv = models.IntegerField(default=0)
     servname = models.CharField(max_length=16)
-    servcost = models.IntegerField(default= 0)
-    servqnt = models.IntegerField(default= 0)
+    servcost = models.IntegerField(default=0)
+    servqnt = models.IntegerField(default=0)
     servtotal = models.IntegerField
-    cust = models.IntegerField(default= 0)
+    cust = models.IntegerField(default=0)
     custname = models.CharField(max_length=16)
+
+    def __str__(self):
+        return self.servname
 
 
 class cart(models.Model):
-    serv = models.IntegerField(default= 0)
+    serv = models.IntegerField(default=0)
     servname = models.CharField(max_length=16)
-    servcost = models.IntegerField(default= 0)
-    servqnt = models.IntegerField(default= 0)
-    servtotal = models.IntegerField(default= 0)
-    cust = models.IntegerField(default= 0)
+    servcost = models.IntegerField(default=0)
+    servqnt = models.IntegerField(default=0)
+    servtotal = models.IntegerField(default=0)
+    cust = models.IntegerField(default=0)
     custname = models.CharField(max_length=16)
+
+    def __str__(self):
+        return self.servname
+
 
 class msg(models.Model):
     mname = models.CharField(max_length=128)
@@ -58,13 +66,12 @@ class msg(models.Model):
     def __str__(self):
         return self.mname
 
+
 class clin(models.Model):
     cname = models.CharField(max_length=16)
-    cimg = models.ImageField(upload_to = 'assets/images/clientimg')
+    cimg = models.ImageField(upload_to='assets/images/clientimg')
     cliishigh = models.BooleanField(default=False)
     clinurl = models.CharField(max_length=64)
 
     def __str__(self):
         return self.cname
-
-
