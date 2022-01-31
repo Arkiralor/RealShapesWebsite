@@ -7,9 +7,12 @@ Marketing website for graphics-print shop.
 ### .ENV Format:
 
 ```
-DATABASE = 
-PGUSER = 
-PGPASSWORD = 
-PGHOST = 
-PGPORT = 
+SECRET_KEY = " "
+DATABASE = ' '
+PGDATABASE = ' '
+PGUSER = ' '
+PGPASSWORD = ' '
+PGHOST = ' '
+PGPORT = ' '
+DEBUG = ' '
 ```

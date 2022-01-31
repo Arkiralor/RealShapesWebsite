@@ -50,10 +50,13 @@ class cart(models.Model):
     custname = models.CharField(max_length=16)
 
 class msg(models.Model):
-    mname = models.CharField(max_length=16)
-    memail = models.CharField(max_length=32)
-    mphone = models.CharField(max_length=10)
+    mname = models.CharField(max_length=128)
+    memail = models.CharField(max_length=128)
+    mphone = models.CharField(max_length=128)
     mmsg = models.TextField()
+
+    def __str__(self):
+        return self.mname
 
 class clin(models.Model):
     cname = models.CharField(max_length=16)
